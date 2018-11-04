@@ -1,0 +1,271 @@
+body{
+  background: lightgray;
+}
+
+#app{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.changeTemplateButton{
+  margin: 0 auto 0;
+  width: 225px; height: 25px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background: linear-gradient(to top, rgba(255, 249, 180, 1), rgba(255, 245, 117, 0.50));
+  color: darkslategray;
+  font-weight: bold;
+}
+
+.weatherBox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 100%;
+  height: 94vh;
+  color: white;
+}
+
+.singleForecast{
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.singleWeatherWrapper{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%; height: 100%;
+  align-items: center;
+}
+
+.singleWeatherWindow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  width: 40%; height: 100%;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.50);
+  box-shadow: 0 5px 5px rgba(132, 126, 91, 0.5);
+}
+
+
+.dayBlock{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.49);
+  color: palegoldenrod;
+  width: 15%;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+*{
+  outline: none !important;
+}
+
+.bgMorning{
+  background: url("https://b.radikal.ru/b39/1807/cb/e325b2dbd962.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.bgDay{
+  background: url("https://a.radikal.ru/a22/1807/5e/69aa477c3e82.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.bgEvening{
+  background: url("https://d.radikal.ru/d12/1807/2c/70014df74329.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.bgNight{
+  background-image: url("https://d.radikal.ru/d33/1807/a0/7c8625f6cc98.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.fullForecast{
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.fullForecastInner{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.timeButtons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.cityInput{
+  width: 100px;
+  margin: auto;
+}
+
+.inputBox{
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.timeBtn{
+  width: auto; height: 50px;
+  padding: 0.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.25);
+  color: palegoldenrod;
+  font-weight: bold;
+  transition: 0.5s;
+  margin: 0 10px;
+  border: none;
+}
+
+.btnActive{
+  border: groove 5px rgba(225, 219, 155, 0.50);
+}
+
+.flexRow{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrowBox{
+  display: flex;
+  height: 90%; width: 10%;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow{
+  perspective: 200px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: default;
+}
+
+::selection {
+  background: transparent;
+}
+::-moz-selection {
+  background: transparent;
+}
+:hover{
+  cursor: default;
+}
+
+.left:before {
+  display: flex;
+  transform: rotateY(-40deg);
+  transform-origin: 50% 100%;
+  border-radius:  10px 0 0 10px;
+  height: 75%;
+  width: 100%;
+  content: ' ';
+  overflow: hidden;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.01);
+}
+.right:before {
+  display: flex;
+  transform: rotateY(40deg);
+  transform-origin: 50% 100%;
+  border-radius: 0 10px 10px  0;
+  height: 75%;
+  width: 100%;
+  position: absolute;
+  content: ' ';
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.01);
+}
+
+.right:hover:before{
+  background: rgba(132, 126, 91, 0.5);
+  background: linear-gradient(to right, rgba(25, 25, 24, 0.75), rgba(204, 198, 140, 0.25));
+  transition: 0.5s;
+  cursor: pointer;
+}
+.left:hover:before{
+  background: rgba(132, 126, 91, 0.5);
+  background: linear-gradient(to left, rgba(25, 25, 24, 0.75), rgba(204, 198, 140, 0.25));
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.timeBtn:hover{
+  background: rgba(0, 0, 0, 0.70);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.fullWeatherTimeBtn{
+  padding: 5px;
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.50);
+  width: 100%;
+  border-radius: 5px;
+  color: palegoldenrod;
+  transition: 0.5s;
+  box-shadow: 1.5px 1.5px 1.5px 1.5px palegoldenrod;
+  border: none;
+}
+
+.timeBox{
+  width: 70%;
+}
+
+.fullWeatherTimeBtn:hover{
+  background: rgba(238, 232, 170, 0.51);
+  color: black;
+  transition: 0.5s;
+  cursor: pointer;
+  box-shadow: 1.5px 1.5px 1.5px 1.5px palegoldenrod;
+}
+
+.fullWeatherTimeBtn:active{
+  box-shadow: 1px 1px 1px 1px palegoldenrod;
+  transition: 0s;
+}
+
+.hiddenInfo{
+  display: none;
+}
+
+.fullWeatherTimeBtn:focus~.hiddenInfo{
+  display: block;
+  color: palegoldenrod;
+}
