@@ -18,7 +18,7 @@ const SingleForecast = (props) => {
       timeValue = props.timeValue.timeValue;
 
     return (
-      <div className="singleForecast weatherBox bgDay">
+      <div className="singleForecast weatherBox">
         {arrKeys.length ?
           <div className="singleWeatherWrapper">
             <div className="flexRow">
@@ -35,7 +35,6 @@ const SingleForecast = (props) => {
                 <p className="string">{sources[arrKeys[dateValue]].times[timeValue].temp}</p>
                 <p className="string">{sources[arrKeys[dateValue]].times[timeValue].windSpeed}</p>
                 <p className="string">{sources[arrKeys[dateValue]].times[timeValue].description}</p>
-                <p className="string">{sources[arrKeys[dateValue]].times[timeValue].icon}</p>
               </div>
               <div className="arrowBox"
                    onClick={clickHandle}>
@@ -53,7 +52,7 @@ const SingleForecast = (props) => {
                 </button>)
               }
             </div>
-          </div> : <h1>loading...</h1>}
+          </div> : <div className="loaderBox"><p className="loaderText">Loading</p><div className="loader"> </div></div>}
       </div>
     )
 };

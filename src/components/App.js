@@ -14,14 +14,16 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <input type="text"
-               placeholder="enter your city"
-               className="cityInput"
-               onKeyPress={this.props.setCity}/>
+        <div className="inputBox">
         <button className='changeTemplateButton'
                 onClick={this.props.changeTemplate}
                 checked={false}>Change forecast view
         </button>
+        <input type="text"
+               placeholder="enter your city"
+               className="cityInput"
+               onKeyPress={this.props.setCity}/>
+        </div>
         {!this.props.templateChanged.templateChanged ? <SingleForecast/> : <FullForecast/>}
       </Fragment>
     )

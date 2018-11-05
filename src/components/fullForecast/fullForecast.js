@@ -6,7 +6,7 @@ const FullForecast =(props)=> {
     let arrKeys = props.sources.sources ? Object.keys(props.sources.sources) : [];
 
     return (
-      <div className="fullForecast weatherBox bgNight">
+      <div className="fullForecast weatherBox">
           <h1>{props.sources.sources[arrKeys[0]] ? props.sources.sources[arrKeys[0]].city : 'loading...'}</h1>
         <div className="fullForecastInner">
         {
