@@ -5,6 +5,12 @@ import appWrapper from './AppWrapper'
 
 class App extends Component {
 
+  setCity(event){
+    if (event.key === 'Enter') {
+      this.props.getElementsJSON(event.target.value)
+    }
+  }
+
   componentDidMount() {
     if (!this.props.sources.sources) {
       this.props.getElementsJSON('Minsk')
@@ -22,7 +28,7 @@ class App extends Component {
         <input type="text"
                placeholder="enter your city"
                className="cityInput"
-               onKeyPress={this.props.setCity}/>
+               onKeyPress={this.setCity.bind(this)}/>
         </div>
         {!this.props.templateChanged.templateChanged ? <SingleForecast/> : <FullForecast/>}
       </Fragment>

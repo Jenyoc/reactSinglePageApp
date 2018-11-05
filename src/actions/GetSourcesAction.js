@@ -13,13 +13,6 @@ export const getElementsError = () => {
   alert('city not found')
 };
 
-export const setCity=(event)=> {
-  console.log(event.key);
-  if (event.key === 'Enter') {
-    return getElementsJSON(event.target.value)
-  }
-};
-
 export const getElementsJSON = (city) => {
   const uri = "https:/api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=05b4798836b87272780eca72486a4dab";
   return dispatch => {

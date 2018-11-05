@@ -9,15 +9,13 @@ const AppWrapper = Component => {
     return <Component sources={props.sources}
                       getElementsJSON={props.getElementsJSON}
                       changeTemplate={props.changeTemplate}
-                      templateChanged={props.templateChanged}
-                      setCity={props.setCity}/>
+                      templateChanged={props.templateChanged}/>
   };
 
   const mapDispatchToProps = dispatch =>
     bindActionCreators({
         getElementsJSON: getElementsJSON,
-        changeTemplate: changeTemplate,
-        setCity: setCity
+        changeTemplate: changeTemplate
       },
       dispatch
     );
