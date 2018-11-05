@@ -33,7 +33,7 @@ const SingleForecast = (props) => {
                 <h2 className="head2">{arrKeys[dateValue]}</h2>
                 <p className="string"> {sources[arrKeys[dateValue]].times[timeValue].time}</p>
                 <p className="string">{sources[arrKeys[dateValue]].times[timeValue].temp}</p>
-                <p className="string">{sources[arrKeys[dateValue]].times[timeValue].windSpeed}</p>
+                <p className="string">wind speed: {sources[arrKeys[dateValue]].times[timeValue].windSpeed}</p>
                 <p className="string">{sources[arrKeys[dateValue]].times[timeValue].description}</p>
               </div>
               <div className="arrowBox"
