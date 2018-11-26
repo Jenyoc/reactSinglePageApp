@@ -1,0 +1,83 @@
+.reset-all(){
+	html, body, div, span, applet, object,
+	iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+	pre, a, abbr, acronym, address, big, cite,
+	code, del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+	form, label, legend, table, caption, tbody,
+	tfoot, thead, tr, th, td, article, aside,
+	canvas, details, embed, figure, figcaption,
+	footer, header, hgroup, menu, nav, output, ruby,
+	section, summary, time, mark, audio, video,button {
+		.indents-zero;
+		border: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		box-sizing: border-box;
+	}
+}
+
+.indents-zero{
+	margin: 0;
+	padding: 0;
+}
+
+.disp-w-h(@disp, @w, @h){
+  display: @disp;
+  width: @w;
+  height: @h;
+}
+
+.w-h(@w, @h){
+  width: @w; height: @h;
+}
+
+.m-p(@m, @p){
+  margin: @m;
+  padding: @p;
+}
+
+.flex(@direction, @a-items, @j-content){
+	flex-direction: @direction;
+	align-items: @a-items;
+	justify-content: @j-content
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+};
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row-center{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation-rotate{
+  0%{transform: rotate(0deg);}
+  25%{transform: rotate(90deg);}
+  50%{transform: rotate(180deg);}
+  75%{transform: rotate(270deg);}
+  100%{transform: rotate(360deg);}
+}
