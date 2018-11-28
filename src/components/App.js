@@ -1,7 +1,8 @@
 import React, {Fragment, Component} from "react";
-import FullForecast from './fullForecast/fullForecast';
+import FullForecast from './fullForecast/FullForecast';
 import SingleForecast from './singleForecast/SingleForecast';
-import appWrapper from './AppWrapper'
+import appWrapper from './AppWrapper';
+import styles from '../styles/App.less';
 
 class App extends Component {
 
@@ -18,6 +19,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(styles.inputBox);
     return (
       <Fragment>
         <div className="inputBox">
@@ -27,7 +29,7 @@ class App extends Component {
         </button>
         <input type="text"
                placeholder="enter your city"
-               className="cityInput"
+               className={"cityInput"}
                onKeyPress={this.setCity.bind(this)}/>
         </div>
         {!this.props.templateChanged.templateChanged ? <SingleForecast/> : <FullForecast/>}

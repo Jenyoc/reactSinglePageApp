@@ -1,4 +1,5 @@
 import React from "react";
+import '../../styles/SingleForecast.less'
 
 import withViewSingleForecast from './SingleForecastWrapper';
 

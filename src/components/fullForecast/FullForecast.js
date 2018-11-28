@@ -1,5 +1,6 @@
 import React,{Component} from "react";
-import  withViewFullForecast from './fullForecastWrapper'
+import  withViewFullForecast from './FullForecastWrapper';
+import '../../styles/FullForecast.less';
 
 const FullForecast =(props)=> {
 

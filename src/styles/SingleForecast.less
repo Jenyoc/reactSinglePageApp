@@ -1,0 +1,143 @@
+@import "my-less-lib";
+
+.weatherBox{
+  .disp-w-h(flex, 100%, 90%);
+  border-radius: 1vw;
+  color: white;
+}
+
+.singleForecast{
+  .flex(column, center, space-around);
+  background: url("https://images5.alphacoders.com/491/thumb-1920-491150.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.timeBtn{
+  .disp-w-h(flex, 10%, 150%);
+  .flex-center;
+  padding: 0.5%;
+  background: rgba(0, 0, 0, 0.50);
+  color: palegoldenrod;
+  font-weight: bold;
+  transition: 0.5s;
+  margin: 0 1vw;
+  border: solid 0.3vw transparent;
+  font-size: 1vw;
+}
+
+.btnActive{
+  border: groove 0.3vw rgba(225, 219, 155, 0.50);
+  transition: 0.5s;
+}
+
+.singleWeatherWrapper{
+  .disp-w-h(flex, 100%, 90%);
+  .flex(column, center, space-around);
+}
+
+.singleWeatherWindow{
+  .disp-w-h(flex, 35%, 80%);
+  .flex(column, center, space-between);
+  padding: 3vw;
+  border-radius: 1vw;
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 1vw 1vw rgba(132, 126, 91, 0.8);
+}
+
+.timeButtons{
+  .flex-row;
+  justify-content: center;
+  width: 100%;
+}
+
+.flexRow{
+  .flex-row-center;
+  .w-h(100%,100%);
+}
+
+.arrowBox{
+  .disp-w-h(flex, 10%, 90%);
+  .flex-center;
+}
+
+.arrow{
+  .disp-w-h(flex, 100%, 100%);
+  .flex-center;
+  perspective: 20vw;
+  overflow: hidden;
+  cursor: default;
+  font-size: 1.5vw;
+}
+
+::selection {
+  background: transparent;
+}
+::-moz-selection {
+  background: transparent;
+}
+:hover{
+  cursor: default;
+}
+
+.left:before {
+  .disp-w-h(flex, 100%, 75%);
+  transform: rotateY(-40deg);
+  transform-origin: 50% 100%;
+  border-radius:  1vw 0 0 1vw;
+  content: ' ';
+  overflow: hidden;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.01);
+}
+.right:before {
+  .disp-w-h(flex, 100%, 75%);
+  transform: rotateY(40deg);
+  transform-origin: 50% 100%;
+  border-radius: 0 1vw 1vw  0;
+  position: absolute;
+  content: ' ';
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.01);
+}
+
+.right:hover:before{
+  background: rgba(132, 126, 91, 0.5);
+  background: linear-gradient(to right, rgba(25, 25, 24, 0.75), rgba(204, 198, 140, 0.25));
+  transition: 0.5s;
+  cursor: pointer;
+}
+.left:hover:before{
+  background: rgba(132, 126, 91, 0.5);
+  background: linear-gradient(to left, rgba(25, 25, 24, 0.75), rgba(204, 198, 140, 0.25));
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.timeBtn:hover{
+  background: rgba(0, 0, 0, 0.70);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.loaderText{
+  font-size: 2.8vw;
+  text-shadow: black 0 0 0.1vw;
+  position: fixed;
+  z-index: 1;
+}
+
+.loader{
+  width: 10vw; height: 10vw;
+  background: linear-gradient(45deg, rgba(225, 219, 155, 0.51), rgba(0, 0, 0, 0), rgba(30, 30, 30, 0.5));
+  animation: loader 0.5s infinite ease-in-out;
+  border-radius: 5vw;
+}
+
+@keyframes loader {
+  .animation-rotate;
+}
+
+.loaderBox{
+  .flex-center;
+}

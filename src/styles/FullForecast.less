@@ -1,0 +1,67 @@
+@import "my-less-lib";
+
+.fullForecast{
+  .flex(column, stretch, space-around);
+  background: url("https://a.radikal.ru/a21/1811/7b/a8c8d9231a3e.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.dayBlock{
+  .disp-w-h(flex, 15%, auto);
+  .flex(column, center, space-around);
+  background: rgba(0, 0, 0, 0.85);
+  color: palegoldenrod;
+  border-radius: 1vw;
+  padding: 0.5vw;
+}
+
+.fullForecastInner{
+  .disp-w-h(flex, 100%, auto);
+  .flex(row, flex-start, space-around);
+}
+
+.fullWeatherTimeBtn{
+  .m-p(0.5vw, 0.5vw);
+  background: rgba(0, 0, 0, 0.50);
+  width: 100%;
+  border-radius: 0.5vw;
+  color: palegoldenrod;
+  transition: 0.5s;
+  box-shadow: 0.15vw 0.15vw 0.15vw 0.15vw palegoldenrod;
+  border: none;
+  font-size: 1vw;
+}
+
+.timeBlock{
+  .flex-col-center;
+  width: 100%;
+}
+
+.timeBox{
+  .disp-w-h(flex, 70%, auto);
+  .flex(column, auto, flex-start);
+}
+
+.fullWeatherTimeBtn:hover{
+  background: rgba(238, 232, 170, 0.51);
+  color: black;
+  transition: 0.5s;
+  cursor: pointer;
+  box-shadow: 0.10vw 0.10vw 0.10vw 0.10vw palegoldenrod;
+}
+
+.fullWeatherTimeBtn:active{
+  box-shadow: 0.05vw 0.05vw 0.05vw 0.05vw palegoldenrod;
+  transition: 0s;
+}
+
+.hiddenInfo{
+  display: none;
+  font-size: 1vw;
+}
+
+.fullWeatherTimeBtn:focus~.hiddenInfo{
+  display: block;
+  color: palegoldenrod;
+}
