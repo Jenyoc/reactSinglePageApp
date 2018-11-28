@@ -2,7 +2,7 @@ import React, {Fragment, Component} from "react";
 import FullForecast from './fullForecast/FullForecast';
 import SingleForecast from './singleForecast/SingleForecast';
 import appWrapper from './AppWrapper';
-import styles from '../styles/App.less';
+import '../styles/App.less';
 
 class App extends Component {
 
@@ -19,7 +19,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(styles.inputBox);
     return (
       <Fragment>
         <div className="inputBox">
